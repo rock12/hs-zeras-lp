@@ -17,6 +17,7 @@
 #else
 #define LCD_DEBUG(fmt)  printk(fmt)
 #endif
+extern LCM_DRIVER hx8379c_daxian_D500N3323V0_BOE_dsi_2_vdo_fwvga_lcm_drv;
 extern LCM_DRIVER otm9605a_dsi_vdo_djn_qhd_ips_lcm_drv;
 extern LCM_DRIVER otm9605a_ruixin_RX_466OTM_977A_AUO_dsi_vdo_qhd_lcm_drv;
 extern LCM_DRIVER otm9605a_dsi_vdo_lg_lcm_drv;
@@ -228,6 +229,11 @@ LCM_DRIVER* lcm_driver_list[] =
 #if defined(OTM9605A_DSI_VDO_LG) 
 	&otm9605a_dsi_vdo_lg_lcm_drv,
 #endif
+
+#if defined(HX8379C_DAXIAN_D500N3323V0_BOE_DSI_2_VDO_FWVGA) 
+	&hx8379c_daxian_D500N3323V0_BOE_dsi_2_vdo_fwvga_lcm_drv,
+#endif
+
 #if defined(OTM9605A_RUIXIN_RX_466OTM_977A_AUO_DSI_VDO_QHD) 
 	&otm9605a_ruixin_RX_466OTM_977A_AUO_dsi_vdo_qhd_lcm_drv,
 #endif

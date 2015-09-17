@@ -176,7 +176,7 @@ a sample config, send this config should cause the chip cannot work normally*/
 
 #define CTP_CFG_GROUP3_CHARGER	CTP_CFG_GROUP3
 
-//STEP_2(REQUIRED):Change I/O define & I/O operation mode.
+//STEP_2(REQUIRAD):Change I/O define & I/O operation mode.
 #define GTP_RST_PORT    GPIO_CTP_RST_PIN
 #define GTP_INT_PORT    GPIO_CTP_EINT_PIN
 
@@ -208,12 +208,12 @@ a sample config, send this config should cause the chip cannot work normally*/
 
 //STEP_3(optional):Custom set some config by themself,if need.
 #if GTP_CUSTOM_CFG
-  #define GTP_MAX_HEIGHT  960		
-  #define GTP_MAX_WIDTH    540
+  #define GTP_MAX_HEIGHT  854		
+  #define GTP_MAX_WIDTH    480
   #define GTP_INT_TRIGGER  1    //0:Rising 1:Falling
 #else
-#define GTP_MAX_HEIGHT   960
-#define GTP_MAX_WIDTH    540
+#define GTP_MAX_HEIGHT   854
+#define GTP_MAX_WIDTH    480
   #define GTP_INT_TRIGGER  0
 #endif
 #define GTP_MAX_TOUCH      5

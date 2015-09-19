@@ -1227,6 +1227,7 @@ static void tpd_down(s32 x, s32 y, s32 size, s32 id)
 	input_mt_sync(tpd->dev);
 	TPD_DEBUG_SET_TIME;
 	TPD_EM_PRINT(x, y, x, y, id, 1);
+	printk("tpd-down,", x, y);
 	tpd_history_x = x;
 	tpd_history_y = y;
 

@@ -683,7 +683,7 @@ static s32 gtp_init_panel(struct i2c_client *client)
 {
 	s32 ret = -1;
 
-#if GTP_DRIVER_SEND_CFG
+#if 0
 	s32 i;
 	u8 check_sum = 0;
 	u8 rd_cfg_buf[16];

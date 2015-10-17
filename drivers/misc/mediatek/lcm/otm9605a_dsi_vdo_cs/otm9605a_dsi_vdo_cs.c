@@ -257,7 +257,7 @@ static struct LCM_setting_table lcm_sleep_out_setting[] =
 static void push_table(struct LCM_setting_table *table, unsigned int count, unsigned char force_update)
 {
     unsigned int i;
-
+/*
     for(i = 0; i < count; i++)
     {
 
@@ -280,7 +280,7 @@ static void push_table(struct LCM_setting_table *table, unsigned int count, unsi
              //   dsi_set_cmdq_dcs(cmd, table[i].count, table[i].para_list, force_update);
         }
     }
-
+*/
 }
 
 static void init_lcm_registers(void)
@@ -450,7 +450,7 @@ static unsigned int lcm_compare_id(void)
     	SET_RESET_PIN(1);
 	MDELAY(20);  
 
-	lcd_id =  mt_get_gpio_in(GPIO_LCM_ID_PIN);
+	lcd_id =  mt_get_gpio_in(GPIO112);
 
 #ifdef BUILD_LK
 	printf("zhuoshineng LK otm9605a debug: otm9605a id = %d\n",lcd_id);
@@ -478,13 +478,13 @@ static unsigned int lcm_compare_id(void)
 
 
 
-	if((id == 0x96)
+	if(id == 0x96)
 	{
 		return 1;
 	}
 	else
 	{
-		return 0;
+		return 1;
 	}
 
 }

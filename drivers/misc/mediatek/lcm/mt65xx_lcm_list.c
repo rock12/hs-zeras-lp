@@ -17,6 +17,7 @@
 #else
 #define LCD_DEBUG(fmt)  printk(fmt)
 #endif
+extern LCM_DRIVER nt35512_shengji_SJFW45N0257_BOE_vdo_fwvga_lcm_drv;
 extern LCM_DRIVER otm9605a_qhd_dsi_vdo_lcm_drv;
 extern LCM_DRIVER otm9605a_dsi_vdo_djn_qhd_ips_lcm_drv;
 extern LCM_DRIVER otm9605a_ruixin_RX_466OTM_977A_AUO_dsi_vdo_qhd_lcm_drv;
@@ -226,6 +227,9 @@ extern LCM_DRIVER otm8019a_fwvga_dsi_vdo_boe_lcm_drv;
 //end by zhangdongfang
 LCM_DRIVER* lcm_driver_list[] = 
 {
+#if defined(NT35512_SHENGJI_SJFW45N0257_BOE_VDO_FWVGA) 
+        &nt35512_shengji_SJFW45N0257_BOE_vdo_fwvga_lcm_drv,
+#endif
 #if defined(OTM9605A_QHD_DSI_VDO) 
         &otm9605a_qhd_dsi_vdo_lcm_drv,
 #endif
